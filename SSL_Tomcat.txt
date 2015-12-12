@@ -1,0 +1,40 @@
+Step by step guide for tomcat SSL:
+https://www.mulesoft.com/tcat/tomcat-ssl
+
+Apache guide for ssl in tomcat:
+https://tomcat.apache.org/tomcat-7.0-doc/ssl-howto.html
+
+another guide:
+http://javarevisited.blogspot.com/2013/07/how-to-configure-https-ssl-in-tomcat-6-7-web-server-java.html
+
+setup connectoin in 5 mins:
+https://dzone.com/articles/setting-ssl-tomcat-5-minutes
+
+another example:
+http://www.mkyong.com/tomcat/how-to-configure-tomcat-to-support-ssl-or-https/
+
+useful example for encrypting username/pwd given in tomcat server.xml:
+http://www.experts-exchange.com/articles/3624/Encrypt-username-and-password-for-JNDI-in-Tomcat-Server-xml.html
+
+
+
+1) Steps to install SSL:
+
+Complete follow the Apache guide and the generated keystore file is stored in C:\Users\dell which is the users home directory.
+
+keystore password:
+swe681AKHK
+
+
+2) Steps to move the datasource to tomcat server installation:
+https://tomcat.apache.org/tomcat-7.0-doc/jndi-datasource-examples-howto.html
+
+
+3) Implementing encryption for datasource, follow the step by step guide:
+http://www.jdev.it/encrypting-passwords-in-tomcat/
+Note: 
+1) Make sure when you export the jar, you specify the main method in the 
+process.
+2) &amp should be changed to &.
+3) To the project, add bin\tomcat-juli.jar & lib\tomcat-jdbc.jar to build path and web-inf lib.
+4) Ignore the changes for both server.xml and context.xml. Whatever is done for context.xml works just fine.
