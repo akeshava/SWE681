@@ -29,6 +29,36 @@ swe681AKHK
 2) Steps to move the datasource to tomcat server installation:
 https://tomcat.apache.org/tomcat-7.0-doc/jndi-datasource-examples-howto.html
 
+Add the code given below to the respective files:
+
+web.xml:
+ <resource-ref>
+	 <description>Oracle Datasource example</description>
+	 <res-ref-name>jdbc/myoracle</res-ref-name>
+	 <res-type>javax.sql.DataSource</res-type>
+	 <res-auth>Container</res-auth>
+ </resource-ref>
+
+To get database connection,add the following method to the DAO:
+	private Connection getDataConnection(){
+		Connection con = null;
+		Context initContext;
+		try {
+			initContext = new InitialContext();
+			Context envContext  = (Context)initContext.lookup("java:/comp/env");
+			DataSource ds = (DataSource)envContext.lookup("jdbc/myoracle");
+			con = ds.getConnection();
+		
+		} catch (NamingException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("the data source lookup failed!");
+		}
+		
+		return con;
+	}
+
+After adding the modifications, make changes to the context.xml to include the data source information. The context.xml is there in the repository.
 
 3) Implementing encryption for datasource, follow the step by step guide:
 http://www.jdev.it/encrypting-passwords-in-tomcat/
