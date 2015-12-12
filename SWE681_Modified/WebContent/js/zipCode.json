@@ -1,0 +1,62 @@
+[
+{
+"zip": "22312",
+"city": "Alexandria",
+"state":"VA"
+},
+{
+"zip": "22030",
+"city": "Fairfax",
+"state":"VA"
+},
+{
+"zip": "22031",
+"city": "Fairfax",
+"state":"VA"
+},
+{
+"zip": "22043",
+"city": "Falls Church",
+"state":"VA"
+},
+{
+"zip": "22301",
+"city": "Tysons Corner",
+"state":"VA"
+},
+{
+"zip": "22102",
+"city": "McLean",
+"state":"VA"
+},
+{
+"zip": "20037",
+"city": "Washington",
+"state":"DC"
+},
+{
+"zip": "22315",
+"city": "Alexandria",
+"state":"VA"
+},
+{
+"zip": "20706",
+"city": "Lanham",
+"state":"MD"
+},
+{
+"zip": "20742",
+"city": "College Park",
+"state":"MD"
+},
+{
+"zip": "20147",
+"city": "Ashburn",
+"state":"VA"
+},
+{
+"zip": "20148",
+"city": "Ashburn",
+"state":"VA"
+}
+]
